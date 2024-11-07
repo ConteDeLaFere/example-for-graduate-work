@@ -31,10 +31,6 @@ public class CommentEntity {
     @NonNull
     private UserEntity user;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @NonNull
-    private AdEntity ad;
-
     public CommentEntity(LocalDateTime createdAt, String text) {
         this.createdAt = createdAt;
         this.text = text;

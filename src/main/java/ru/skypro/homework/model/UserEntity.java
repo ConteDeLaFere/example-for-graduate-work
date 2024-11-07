@@ -40,9 +40,6 @@ public class UserEntity {
     private String image;
 
     @OneToMany(mappedBy = "author", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<CommentEntity> comments;
-
-    @OneToMany(mappedBy = "author", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<AdEntity> ads;
 
     public UserEntity(String username, String password, Role role, String firstName, String lastName, String phone, String image) {
